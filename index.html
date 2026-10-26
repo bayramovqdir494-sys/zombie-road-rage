@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Zombie Road Rage 3D</title><link rel="stylesheet" href="style.css">
+<script>window.SDK_OPTIONS={gameId:"REPLACE_WITH_GAMEMONETIZE_GAME_ID",onEvent:function(e){window.__gmEvent&&window.__gmEvent(e);}};
+(function(a,b,c){var d=a.getElementsByTagName(b)[0];a.getElementById(c)||(a=a.createElement(b),a.id=c,a.src="https://api.gamemonetize.com/sdk.js",d.parentNode.insertBefore(a,d))})(document,"script","gamemonetize-sdk");</script>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/jsm/"}}</script>
+</head><body>
+<canvas id="c"></canvas>
+<div id="load"><div class="logo">ZOMBIE<br><b>ROAD RAGE</b></div><div class="bar"><i id="lbar"></i></div><div id="ltxt">Loading…</div><div id="ltip">TIP: Hit NITRO to smash barricades for free.</div></div>
+<div id="hud" class="hide">
+ <div class="top"><div class="pill"><span class="ic">🪙</span><span id="hcoin">0</span></div><div class="pill big"><span id="hdist">0</span> m</div><div class="pill"><span class="ic">💀</span><span id="hkill">0</span></div><button id="bpause" class="round">II</button></div>
+ <div class="bars"><div class="mb hp"><i id="bhp"></i><span>ARMOR</span></div><div class="mb fuel"><i id="bfuel"></i><span>FUEL</span></div></div>
+ <div id="speed"></div><div id="pw" class="pw"></div><div id="combo"></div><div id="bossbar" class="hide"><span>BRUTE</span><i id="bboss"></i></div>
+ <button id="bboost" class="boost">NITRO<i id="bnitro"></i></button>
+ <div id="tut" class="hide">◀ DRAG TO STEER ▶<small>Gun fires automatically · Hit NITRO to smash through</small></div>
+</div>
+<div id="menu" class="scr hide">
+ <div class="logo">ZOMBIE<br><b>ROAD RAGE</b></div>
+ <div class="row"><div class="pill"><span class="ic">🪙</span><span id="mcoin">0</span></div><div class="pill">BEST <span id="mbest">0</span> m</div></div>
+ <button id="bplay" class="btn go">▶ DRIVE</button>
+ <div id="mis" class="mis"></div>
+ <div class="row"><button id="bgarage" class="btn">🔧 GARAGE</button><button id="bsound" class="btn sm">🔊</button></div>
+</div>
+<div id="garage" class="scr hide">
+ <h2>GARAGE</h2>
+ <div id="trucks" class="trucks"></div>
+ <div id="ups" class="ups"></div>
+ <div class="row"><div class="pill"><span class="ic">🪙</span><span id="gcoin">0</span></div><button id="bgback" class="btn">◀ BACK</button><button id="bgplay" class="btn go sm2">▶ DRIVE</button></div>
+</div>
+<div id="over" class="scr hide">
+ <h2 id="otitle">WRECKED!</h2>
+ <div class="stats"><div><small>DISTANCE</small><b id="odist">0</b></div><div><small>ZOMBIES</small><b id="okill">0</b></div><div><small>COINS</small><b id="ocoin">0</b></div></div>
+ <div id="onew" class="hide">NEW RECORD!</div>
+ <button id="brevive" class="btn ad">▶ REVIVE (AD)</button>
+ <button id="bdouble" class="btn ad">▶ 2× COINS (AD)</button>
+ <div class="row"><button id="bogarage" class="btn">🔧 GARAGE</button><button id="boagain" class="btn go sm2">↻ AGAIN</button></div>
+</div>
+<div id="pause" class="scr hide"><h2>PAUSED</h2><button id="bresume" class="btn go">▶ RESUME</button><button id="bquit" class="btn">MENU</button></div>
+<div id="banner"></div>
+<div id="rot" class="hide">Rotate for the best view ⟳</div>
+<script type="module" src="js/main.js"></script>
+</body></html>
